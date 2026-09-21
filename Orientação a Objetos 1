@@ -1,0 +1,24 @@
+public class main {
+    public static void main(String[] args) {
+         // Altere os valores abaixo para testar outros números
+         double a = 7.0; // Valor do lado igual
+        double b = 9.0; // Valor da base
+
+        // Verifica se os valores formam um triângulo válido
+        if (a <= (b / 2)){
+            System.out.println("Valores inválidos. O lado 'a' deve ser maior que " + (b / 2));
+        } else{
+            // Calcula a altura
+            double altura = Math.sqrt((a * a) - ((b * b) / 4));
+
+            // Calcula a área
+            double area = (b * altura) / 2;
+
+            // Exibe os resultados
+            System.out.printf("Lado igual (a): %.2f%n", a);
+            System.out.printf("Base (b): %.2f%n", b);
+            System.out.printf("A altura do triangulo e: %.2f%n", altura);
+            System.out.printf("A area do triangulo isosceles e: %.2f%n", area);
+        }
+    }
+}
