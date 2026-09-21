@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Digite o lado igual (a): ");
+        double a = entrada.nextDouble();
+
+        System.out.print("Digite a base (b): ");
+        double b = entrada.nextDouble();
+
+        if (a <= (b / 2)) {
+            System.out.println("Valores invalidos.");
+        } else {
+
+            double altura = Math.sqrt((a * a) - ((b * b) / 4));
+
+            double area = (b * altura) / 2;
+
+            System.out.printf("Lado igual (a): %.2f%n", a);
+            System.out.printf("Base (b): %.2f%n", b);
+            System.out.printf("A altura do triangulo e: %.2f%n", altura);
+            System.out.printf("A area do triangulo isosceles e: %.2f%n", area);
+        }
+
+        entrada.close();
+    }
+}
