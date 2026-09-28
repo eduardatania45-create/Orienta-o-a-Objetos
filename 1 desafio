@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("===========================");
+        System.out.println("    BURGUER HOUSE BH  ");
+        System.out.println("===========================");
+        Double valorConta;
+        Double taxaGarcom;
+        int pessoas;
+        
+        System.out.print("Digite o valor da conta ");
+        valorConta = scanner.nextDouble();
+        System.out.print("Digite a taxa do garcom (%) ");
+        taxaGarcom = scanner.nextDouble();
+        System.out.print("Digite a quantidade de pessoas ");
+        pessoas = scanner.nextInt();
+        Double valorTaxa;
+        valorTaxa = valorConta * taxaGarcom/100;
+        Double total;
+        total = valorConta + valorTaxa;
+        double valorPorPessoa;
+        valorPorPessoa = total/pessoas;
+        int valorInteiro;
+        valorInteiro = (int) valorPorPessoa;
+        Double sobra;
+        sobra = total - (valorInteiro*pessoas);
+        System.out.println();
+         System.out.println("===========================");
+        System.out.println("    RESUMO DA CONTA ");
+        System.out.println("===========================");
+        
+        System.out.println("Valor da taxa; R$"+ valorTaxa);
+        System.out.println("Total da conta; R$" + total);
+        System.out.println("Cada pessoa deve pagar; R$" + valorInteiro);
+        System.out.printf("Valor para a caixinha; R$%.2f%n",sobra);
+        scanner.close();
+    }
+}
+
