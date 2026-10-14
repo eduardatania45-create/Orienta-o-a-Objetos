@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Carona {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("==============================");
+        System.out.println("    APP DE CARONA ESCOLAR");
+        System.out.println("==============================");
+
+        System.out.print("Distancia da viagem (km): ");
+        double distancia = entrada.nextDouble();
+
+        System.out.print("Quantidade de alunos: ");
+        int alunos = entrada.nextInt();
+
+        double total = distancia * 2.50 + 4.00;
+        double valorAluno = total / alunos;
+
+        System.out.println("\n========== RESULTADO ==========");
+        System.out.printf("Distancia: %.2f km%n", distancia);
+        System.out.printf("Total da corrida: R$ %.2f%n", total);
+        System.out.printf("Valor por aluno: R$ %.2f%n", valorAluno);
+        System.out.println("==============================");
+
+        entrada.close();
+    }
+}
